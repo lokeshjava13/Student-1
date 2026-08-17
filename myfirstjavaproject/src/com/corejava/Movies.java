@@ -4,6 +4,12 @@ public class Movies {
 	String movieName;
 	int realeasedYear;
 	int ticketPrice;
+	static int objectCount = 0;
+
+    Movies() {
+        objectCount++;
+    }
+
 	
 	
 	public static void main(String[] args) {
@@ -35,6 +41,8 @@ public class Movies {
 		System.out.println("movieName:"+M3.movieName);
 		System.out.println(" realeasedYear:"+M3. realeasedYear);
 		System.out.println("ticketPrice:"+M3.ticketPrice);
+		
+		System.out.println("number of objects created:"+objectCount);
 			
 		}
 	}
