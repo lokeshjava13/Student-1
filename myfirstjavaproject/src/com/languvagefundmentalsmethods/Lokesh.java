@@ -1,11 +1,19 @@
 package com.languvagefundmentalsmethods;
 
 public class Lokesh {
+	
+	static int count = 0;
+	
+	Lokesh(){
+		count++;
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
       System.out.println("method started");
       Lokesh l1 = new Lokesh();
+    
+     
         l1.DisplayName();
         l1.DisplayAge();
         l1.DisplayStudent();
@@ -107,11 +115,11 @@ public class Lokesh {
         l1.gopi();
         l1.Ashok();
         l1.bhargav();
-        l1.AdiNarayana();
+         l1.AdiNarayana();
         l1.Raju();
         l1.NagaSai();
         
-       
+       System.out.println(count);
         
 	}
 		void DisplayName() {
@@ -428,6 +436,8 @@ public class Lokesh {
 			 
 			 
 			 System.out.println("METHOD ENDED");
+			 
+			 
 		 }
 
 }
