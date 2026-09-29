@@ -99,7 +99,7 @@ public class TestLSDemo17 {
 	  }
 	  
 	  System.out.println("FINAL PAYABLE AMOUNT: "+total+" /-");
-	  System.out.println("Thank You Visit Again - D-MART");
+	  System.out.println("Thank You ANDI MALLI RANDI  IDHI MANA - D-MART");
 	  sc.close();
 	 }
 	}

@@ -3,9 +3,54 @@ package com.logicalstatements;
 import java.util.Scanner;
 
 public class Resturent {
+	
+	
+		 
+	 
+	 void showVegItems() {
+		 System.out.println("mushroom bhiryani full          ₹250");
+		 System.out.println("mushroom bhiryani half          ₹150");
+		 System.out.println("sweetcorn bhiryani              ₹200");
+		 System.out.println("panasa    bhiryani              ₹250");
+		 System.out.println("panner    bhiryani              ₹240");
+	 }
+	 void showNvItems() {
+		 System.out.println("Chicken fry bhiryani         ₹250");
+		 System.out.println("Chicken Dum bhiryani         ₹250");
+		 System.out.println("Chicken Rost  bhiryani       ₹220");
+		 System.out.println("Mogalie  bhiryani            ₹300");
+		 
+		 System.out.println("Mutton Fry bhiryani          ₹450");
+		 System.out.println("Mutton Dum bhiryani          ₹500");
+		 System.out.println("Fish  bhiryani               ₹350");
+		 System.out.println("Prawns  bhiryani             ₹300");
+	 }
+	 void showDeserts() {
+		 System.out.println("gulab jamun -------------₹120");
+		 System.out.println("Kulfiee     -------------₹40");
+		 System.out.println("Ice Cream   -------------flovours available");
+		 
+	 }
+	 void showIceCreams() {
+		 System.out.println("Vannila                  ₹60");
+		 System.out.println("Chocolate                ₹80");
+		 System.out.println("Strawberry               ₹70");
+		 System.out.println("Butterscotch             ₹90");
+		 System.out.println("Black current            ₹100");
+	 }
+	 void showDrinks() {
+		 System.out.println("coke                     ₹50/-");
+		 System.out.println(" pepsi                   ₹50/-");
+		 System.out.println("sprite                   ₹50/-"); 
+		 System.out.println("juice                    ₹80/-");
+		 System.out.println("water                    ₹20/-");
+		 System.out.println("bear                     ₹150/-");
+		 
+	 }
 
 	public static void main(String[] args) {
 		System.out.println("WELCOME TO APPALARAJU HOTEL");
+		Resturent r = new Resturent();
 		Scanner sc = new Scanner(System.in);
 		double totalBill = 0;
 
@@ -15,13 +60,16 @@ public class Resturent {
 		double drinksBill = 0;
 
 		System.out.println("Enter your menu :" + "(veg / nonveg / dest / drinks)");
+		
 		String menu = sc.next().toLowerCase();
 		String m = "";
 
 		do {
 			switch (menu) {
 			case "veg" -> {
-				System.out.println("available veg items:" + " mushroom_full, mushroom_half, sweetcorn, panasa, panner");
+				System.out.println("Available vegeterian items");
+				r.showVegItems();
+				System.out.println( "choose for ---> mushroom_full, mushroom_half, sweetcorn, panasa, panner");
 				System.out.println("Enter your item");
 				String vitem = sc.next().toLowerCase();
 				String vyn = "";
@@ -57,10 +105,11 @@ public class Resturent {
 						vitem = sc.next().toLowerCase();
 					}
 				} while (vyn.equalsIgnoreCase("y"));
-			}
+			} 
 
 			case "nonveg" -> {
-				System.out.println("Available non-veg:"
+				r.showNvItems();
+				System.out.println("Choose your Favourate:"
 						+ " chickfry, chickdum, chickrost, mogal, muttonfry, muttondum, fish, prawns");
 				System.out.println("Enter item");
 				String item = sc.next().toLowerCase();
@@ -111,7 +160,10 @@ public class Resturent {
 			}
 
 			case "dest" -> {
-				System.out.println("Enter your desert: " + "gulabjam / kulfi / icecream");
+				System.out.println("AVaila desrts ");
+				r.showDeserts();
+				
+				System.out.println("choose this items: " + "gulabjam / kulfi / icecream");
 				String dest = sc.next().toLowerCase();
 				String dyn = "";
 				do {
@@ -129,6 +181,8 @@ public class Resturent {
 					case "icecream", "ice_cream" -> {
 						String mice;
 						do {
+							System.out.println("Aialable flavours  ");
+							r.showIceCreams();
 							System.out.println("enter flavour: "
 									+ "vanilla / chocolate / strawberry / butterscotch / blackcurrent");
 							String fav = sc.next().toLowerCase();
@@ -172,6 +226,8 @@ public class Resturent {
 			case "drinks" -> {
 				String moreDrink;
 				do {
+					System.out.println("Available items");
+					r.showDrinks();
 					System.out.println("enter drink: coke / pepsi / sprite / juice / water / beer");
 					String drink = sc.next().toLowerCase();
 					switch (drink) {
