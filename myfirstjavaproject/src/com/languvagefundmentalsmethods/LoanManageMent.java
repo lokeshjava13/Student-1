@@ -76,7 +76,7 @@ public class LoanManageMent {
 		l1.calculateInterest(0, 0);
 		l1.calculateMonthlyEMI(0, 0);
 		l1.loanSummary(0, 0, 0);
-		l1.
+		
 		
 		
 		
